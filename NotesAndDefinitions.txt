@@ -1,0 +1,31 @@
+Lesson 1:
+
+Lesson 2:
+
+Lesson 3:
+
+Lesson 4:
+
+Lesson 5:
+
+Lesson 6:
+
+Lesson 7:
+
+Lesson 8:
+	Objectives:
+		-What is a class constructor?
+		-How to use a class constructor to set the properties of an object, during the object's instantiation
+		-How a child (derived) class can call the constructor of its base class
+
+	Class Constructor: Every class starts with a constructor that is public and named after the class. However, we 
+		can make our own contructors that do more than this default action. So, a class constructor can be created to
+		accept the values we want to store in the properties.
+			-Constructor makes your code a little shorter/cleaner.
+			-Also helps double-check that you have set all the properties
+			-If you forget a parameter you will get an error
+
+	Parameters:
+		When you run a function, or method (like a constructor), it can accept values.
+			-in C#, you need to declare the datatype of the parameter and its name.
+			-when calling the constructor, and creating a new object, you MUST pass in the values within the parameter

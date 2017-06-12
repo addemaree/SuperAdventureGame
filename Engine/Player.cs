@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Player
+    public class Player : LivingCreature
     {
+        //Constructor
+        public Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints, int level) :
+            base(currentHitPoints, maximumHitPoints)
+        {
+            Gold = gold;
+            ExperiencePoints = experiencePoints;
+            Level = level;
+        }
+
         //What is going on? :
 
         //Property Names for Players
@@ -17,8 +26,6 @@ namespace Engine
        //"get" is a function that is getting a value to store in that property
        //"set" is a function that is placing that value into the property
 
-        public int CurrentHitPoints { get; set; }
-        public int MaximumHitPoints { get; set; }
         public int Gold { get; set; }
         public int ExperiencePoints { get; set; }
         public int Level { get; set; }

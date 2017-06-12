@@ -29,19 +29,29 @@ namespace SuperAdventure
         {     
             InitializeComponent();
 
+            //Here we create a new "Location" object and save it to the variable "location". 
+            //Then we assign values to the properties of that object in the ().
+            //**NOTE: NOTICE THE VARIABLE NAME (location) IS LOWER-CASE 
+            //TO MAKE IT DIFFERENT FROM THE CLASS (Location).**
+
+            
+
+            Location location = new Location(1, "Home", "This is your house.");
+
             //This is where we will instantiate a "Player" object to store in the "_player" variable
 
-            _player = new Player();
+            _player = new Player(10, 10, 20, 0, 1);
 
             //This ^^ creates a new player object using the "new Player();" code and assigning it 
             //to the "_player" variable.
 
             //Here we are assigning values to the properties of the "_player" object
-            _player.CurrentHitPoints = 10;
-            _player.MaximumHitPoints = 10;
-            _player.Gold = 20;
-            _player.ExperiencePoints = 0;
-            _player.Level = 1;
+            //**Note this is now shown in the parameters of the constructor**
+            //_player.CurrentHitPoints = 10;
+            //_player.MaximumHitPoints = 10;
+            //_player.Gold = 20;
+            //_player.ExperiencePoints = 0;
+            //_player.Level = 1;
 
             //Here we are getting the value of the properties from the "_player" object, and assigning them to the 
             //text of the labels on the screen

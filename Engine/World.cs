@@ -29,7 +29,8 @@ namespace Engine
         //then read from them in the rest of the program
 
         public static readonly List<Item> Items = new List<Item>();
-        public static readonly List<Monster> Monsters = new List<Monster>();        public static readonly List<Quest> Quests = new List<Quest>();
+        public static readonly List<Monster> Monsters = new List<Monster>();
+        public static readonly List<Quest> Quests = new List<Quest>();
         public static readonly List<Location> Locations = new List<Location>();
 
         //Constants
@@ -86,9 +87,13 @@ namespace Engine
 
         //By calling the Add() method on a list variable or property, we add an object to that list.
         //We used INLINING here, which means we created the value and added it to the list all on one line.
+
+        //Scope: PRIVATE: means that this method can only be run by other code inside this class.
+        //Static: Running a method WITHOUT instantiating an object from the class.
+        //Void: Void means that this method is not going to return a value. It's just going to do some work.
         private static void PopulateItems()
         {
-         //Look at line 96. Here we are adding a new Weapon object to the "Items" list.
+         //Look at line 100. Here we are adding a new Weapon object to the "Items" list.
          //When we call "new Weapon()" the constructor of the "Weapon" class returns a Weapon object
          //with the parameters passed in. Since that is all inside the "Items.Add()" method, that object gets added
          //to the "Items" list.
@@ -109,7 +114,7 @@ namespace Engine
         private static void PopulateMonsters()
          {
             //We create a new Monster object and save it to the variable "rat"
-            //On lines 117 and 118 we add items to the (list) property of "PotentialLootItems" that you might find
+            //On lines 121 and 122 we add items to the (list) property of "PotentialLootItems" that you might find
             //on the rat. 
             //Then on line 131 we add the rat variable to the static "Monsters" list
              Monster rat = new Monster(MONSTER_ID_RAT, "Rat", 5, 3, 10, 3, 3);
@@ -240,6 +245,14 @@ namespace Engine
 
         //If so, it returns that object to us. If we get to the end of the list, and nothing matches 
         //(Which shouldn't happen), the method returns null-nothing.
+
+        //Scope: Public because we are going to need to call this method from other parts of the game.
+        //Static: This class is never an object
+        //Instead of VOID we have ITEM because this method is going to return a value, and the datatype of that
+        //value is going to be "Item", so when the user calls this method, they should get an Item back.
+
+        //This method also has parameters "(int id)" which says the method accepts an id number and returns the item
+        //matching that number.
 
          public static Item ItemByID(int id)
         {

@@ -50,3 +50,15 @@ Lesson 11:
 	Problems with Static Classes:
 		-Static methods and variables are unable to change, so when you decide to use a static variable to hold a value,
 		make sure it's one that you really want to be shared for every user.
+
+Lesson 13:
+	Objectives: 
+		-What functions, procedures and methods are
+		-How functions can call other functions
+	What are functions methods and procedures?
+		-these are names we use to call about a small piece of the program that does a particular task
+			-that task may be to perform a mathematical calculation on some numbers, or read some data from a file,
+			or place an order on a website.
+			-They can perform huge tasks or small ones.
+				-However, if the task/function is large, it is best practice to then break it down into smaller, more
+				readable, functions. CLEAN CODE!

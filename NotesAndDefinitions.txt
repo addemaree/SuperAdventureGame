@@ -29,3 +29,24 @@ Lesson 8:
 		When you run a function, or method (like a constructor), it can accept values.
 			-in C#, you need to declare the datatype of the parameter and its name.
 			-when calling the constructor, and creating a new object, you MUST pass in the values within the parameter
+Lesson 8.1:
+
+Lesson 9:
+
+Lesson 10:
+
+Lesson 11:
+	Objectives:
+		-What a static class is, and how to create one
+		-When you want, and don't want, to use static classes
+	Static Class:
+		-A static class is one that is always available to the rest of your program, like public classes, but with static
+		you don't need to create an object from it. In fact, you can't create an object from it. It's just there
+			- A static class is a place to hold shared resources (variables and methods), since there will only be the one
+			INSTANCE of it, and everything else in your program will use that one, shared set of methods and variables
+	Why would you need a static class?
+		-It allows you to store things in your program that will be used several places in the program.
+		-It is one way to make all your information available everywhere
+	Problems with Static Classes:
+		-Static methods and variables are unable to change, so when you decide to use a static variable to hold a value,
+		make sure it's one that you really want to be shared for every user.

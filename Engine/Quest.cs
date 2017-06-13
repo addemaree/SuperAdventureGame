@@ -17,7 +17,8 @@ namespace Engine
         //By having a different case from the property, it's more obvious when you're working with 
         //the property and when you're working with parameter value.
 
-        public Quest(int id, string name, string description, int rewardExperiencePoints, int rewardGold)
+        public Quest(int id, string name, string description, int rewardExperiencePoints, 
+            int rewardGold)
         {
             //Now we need to assign the values of the parameters to the properties in the class.
             ID = id;
@@ -25,6 +26,7 @@ namespace Engine
             Description = description;
             RewardExperiencePoints = rewardExperiencePoints;
             RewardGold = rewardGold;
+            QuestCompletionItems = new List<QuestCompletionItem>();
         }
 
         //Properties
@@ -33,6 +35,8 @@ namespace Engine
         public string Description { get; set; }
         public int RewardExperiencePoints { get; set; }
         public int RewardGold { get; set; }
+        public Item RewardItem { get; set; }
+        public List<QuestCompletionItem> QuestCompletionItems { get; set; }
 
     }
 }
